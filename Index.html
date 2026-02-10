@@ -6,15 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project Setup Tool</title>
-    <script src="js/templates.js"></script>
-    <script src="js/functions.js"></script>
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
     <main>
       <h1>Project Setup Tool</h1>
-      <form>
+      <form id="setup-form">
         <div class="course-type-field">
           <label for="type-select">Project Type</label>
           <select name="projectType" id="type-select" required>
@@ -23,105 +21,30 @@
             <option value="faculty">Faculty Course</option>
           </select>
         </div>
+
         <div class="program">
           <label for="program-select">Program</label>
           <select name="program" id="program-select" required>
             <option value="">--Choose a program--</option>
-            <? for (let program in programs) { ?>
-            <? if (programs[program] !== programs.facultyCourses) { ?>
-            <? const value = String(program) ?>
-            <option value="<?= value ?>"><?=programs[program].name?></option>
-            <? } ?>
-            <? } ?>
           </select>
         </div>
-        <div class="prefix-number-field">
-          <div>
-            <label for="prefix-input">Course Prefix</label>
-            <input type="text" id="prefix-input" name="prefix" required />
-          </div>
-          <div class="course-number">
-            <label for="course-number-input">Number</label>
-            <input
-              type="text"
-              id="course-number-input"
-              name="courseNumber"
-              pattern="\d\d\d"
-              required
-            />
-          </div>
-        </div>
-        <div class="course-title-field">
-          <label for="course-title-input">Course Title</label>
-          <input
-            type="text"
-            id="course-title-input"
-            name="courseTitle"
-            required
-          />
-        </div>
+
         <div class="sod-template-field">
-          <label for="sod-template-select"
-            ><a
-              target="_blank"
-              href="https://drive.google.com/drive/folders/1wOG_dOIZdQMT3w0JSwiNC8t4BRoMlqCC"
-              >Schedule of Deliverables Template</a
-            ></label
-          >
-          <select
-            type="text"
-            id="sod-template-select"
-            name="sodTemplate"
-            required
-          >
-            <? for (let sodTemplate in sodTemplates) { ?>
-            <? const value = String(sodTemplate) ?>
-            <option value="<?= value ?>">
-              <?=sodTemplates[sodTemplate].name?>
-            </option>
-            <? } ?>
+          <label for="sod-template-select">
+            <a target="_blank" href="https://drive.google.com/drive/folders/1wOG_dOIZdQMT3w0JSwiNC8t4BRoMlqCC">Schedule of Deliverables Template</a>
+          </label>
+          <select id="sod-template-select" name="sodTemplate" required>
+            <option value="">--Choose a template--</option>
           </select>
         </div>
-        <div class="faculty-name-field">
-          <label for="faculty-name-input">Faculty Name</label>
-          <input
-            type="text"
-            id="faculty-name-input"
-            name="facultyName"
-            required
-          />
-        </div>
-        <div class="course-length-field">
-          <label for="course-length-input">Course Length (e.g., 7w)</label>
-          <input
-            type="text"
-            id="course-length-input"
-            name="courseLength"
-            required
-          />
-        </div>
-        <div>
-          <label for="redesign-checkbox">Is it a redesign?</label>
-          <input id="redesign-checkbox" type="checkbox" name="redesign" />
-        </div>
-        <div class="semester-year-field">
-          <label for="semester-year-input"
-            >Redesign Semester/Year (e.g., FA20)</label
-          >
-          <input
-            type="text"
-            id="semester-year-input"
-            name="semesterYear"
-            pattern="\w\w\d\d"
-            required
-          />
-        </div>
+
         <div class="submit-wrapper">
           <p id="success-or-error-message"></p>
           <button type="submit">Create Project Folder</button>
         </div>
       </form>
     </main>
-    <?!= include('JavaScript'); ?>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
