@@ -1,10 +1,10 @@
 {
-  "globalTemplates": {
-    "blueprintStandardId": "1FONxZaZr2HEIM3sc7GNBcLtsB6U-KtCVJ5S2K3uiEtE",
-    "blueprintCyberId": "1FONxZaZr2HEIM3sc7GNBcLtsB6U-KtCVJ5S2K3uiEtE",
-    "settingsStandardId": "19KG-oXHerwL0TdKxxA6Ek9abbfRyPCZoBR_GavZSDus",
-    "settingsCyberId": "1RboXhFGh5gnCeBqRMT6Gm1CRezeR1RVEeuSF9spprLI",
-    "courseStructureWorksheetId": "1qZY4bSH2Rl-yQSPiUHTlzYn9cvZzuxbiuOgBUMbvajY"
+  "config": {
+    "templateBlueprintId": "1FONxZaZr2HEIM3sc7GNBcLtsB6U-KtCVJ5S2K3uiEtE",
+    "templateSettingsTablesId": "19KG-oXHerwL0TdKxxA6Ek9abbfRyPCZoBR_GavZSDus",
+    "cyberTemplateBlueprintId": "1FONxZaZr2HEIM3sc7GNBcLtsB6U-KtCVJ5S2K3uiEtE",
+    "cyberTemplateSettingsTablesId": "1RboXhFGh5gnCeBqRMT6Gm1CRezeR1RVEeuSF9spprLI",
+    "templateCourseStructureWorksheetId": "1qZY4bSH2Rl-yQSPiUHTlzYn9cvZzuxbiuOgBUMbvajY"
   },
   "sodTemplates": {
     "sodTemplateA": {
@@ -36,12 +36,99 @@
       "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68",
       "qmrTemplateId": "1mzIpe5GSv7waJlN0ceQ4kVsS3i0m2lnZhqJxSuxx2YQ"
     },
+    "generic": {
+      "name": "*Program Not Listed",
+      "syllabusTemplateId": "1gYWqI4curZDV0BMfwDRqXok4S8S3b0_5AcJtgEnDYsM",
+      "csdTemplateId": null,
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68"
+    },
     "acct": {
       "name": "ACCT",
       "syllabusTemplateId": "1gYWqI4curZDV0BMfwDRqXok4S8S3b0_5AcJtgEnDYsM",
       "csdTemplateId": "18_Y0UQ1PkXUbjscKpSzdr2QmBKhWUQqqOLNKnXROspU",
       "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68",
       "qmrTemplateId": "133_ka4oyIqkSGy9gOyVy3A4ehSyRoErDMKRdotkrxY4"
+    },
+    "ami": {
+      "name": "AMI",
+      "syllabusTemplateId": "1_-tL_OuGPoPuTRHWwesJbNfPYNGdjc0r",
+      "csdTemplateId": "16tQVMZx1S2wdb9PxT9ySH-aiZP3pHuVJos-4mdCGFlI",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68",
+      "qmrTemplateId": "1yfz_xptgrydrKkOw8K_RREThHKJwjACsJrRJSTSeXl8"
+    },
+    "basIps": {
+      "name": "BAS/IPS",
+      "syllabusTemplateId": "1Kx4lfziBN3HokD7PAnQPnJyYR4UkDBbq",
+      "csdTemplateId": "18_Y0UQ1PkXUbjscKpSzdr2QmBKhWUQqqOLNKnXROspU",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68",
+      "qmrTemplateId": "1YpskTtyJ9tw6CbxuV7M4uo3I-0oARmkoTXHGy7WpeJQ"
+    },
+    "busbtc": {
+      "name": "BUSBTC",
+      "syllabusTemplateId": "1FxZS8pQBvBpTvF_zl7Ga7jG5NPKeDc4jCGB01-g33Yg",
+      "csdTemplateId": "18_Y0UQ1PkXUbjscKpSzdr2QmBKhWUQqqOLNKnXROspU",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68",
+      "qmrTemplateId": "1qyKhPaToWclJvSH0uvV8XtXEYFEa6quiabDtksHTQmY"
+    },
+    "busmgt": {
+      "name": "BUSMGT",
+      "syllabusTemplateId": "1FxZS8pQBvBpTvF_zl7Ga7jG5NPKeDc4jCGB01-g33Yg",
+      "csdTemplateId": "18_Y0UQ1PkXUbjscKpSzdr2QmBKhWUQqqOLNKnXROspU",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68",
+      "qmrTemplateId": "1UCkr6mBxvWZs8ciiIN7W_K3vhxooOH8z8prnlwOKlxI"
+    },
+    "cip": {
+      "name": "CIP",
+      "syllabusTemplateId": "1beDTo00KA66xhjX1ToKWaO1AZeSkWNhxukqc9MI5DFE",
+      "csdTemplateId": "18_Y0UQ1PkXUbjscKpSzdr2QmBKhWUQqqOLNKnXROspU",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68",
+      "qmrTemplateId": "1MBb7pJJwt2dKDlxRQ4eJX9g090v-_J63-KDo908o8V0"
+    },
+    "conflict": {
+      "name": "CONFLICT",
+      "syllabusTemplateId": "1WkpS8z9xIoq4FrK66nok43QCHERi9zqctTFg_nchkZk",
+      "csdTemplateId": "1YlBCIPRjg-gsfi_JU8CCboTUWLf0NzcYWDq1TOCi_yQ",
+      "igTemplateId": "1RArrUaE3cek36zPlkQpXow1qMDmYazZr_uZU2EGainc",
+      "qmrTemplateId": "1mzIpe5GSv7waJlN0ceQ4kVsS3i0m2lnZhqJxSuxx2YQ"
+    },
+    "core": {
+      "name": "Cyber CORe",
+      "syllabusTemplateId": "1LbMFCDSnMx656itcY5VjkcCHuK-CSpLNm--M0uhblrk",
+      "csdTemplateId": "18_Y0UQ1PkXUbjscKpSzdr2QmBKhWUQqqOLNKnXROspU",
+      "igTemplateId": "1VS2facu_67PRcTnpY2G3kk-jxaZK9op6wAvhEejdbXQ",
+      "qmrTemplateId": "1RIljo8LRhYIJCoSf_YmBHEuS5cli6UdF1KjNrU7LPBM"
+    },
+    "cyber": {
+      "name": "Cyber for All",
+      "syllabusTemplateId": "1LbMFCDSnMx656itcY5VjkcCHuK-CSpLNm--M0uhblrk",
+      "csdTemplateId": "18_Y0UQ1PkXUbjscKpSzdr2QmBKhWUQqqOLNKnXROspU",
+      "igTemplateId": "1VS2facu_67PRcTnpY2G3kk-jxaZK9op6wAvhEejdbXQ",
+      "qmrTemplateId": "1mYYq4haUAEqZfQRYw2QJ1hRNguDu4bMt899aGPP2lXs"
+    },
+    "dcm": {
+      "name": "DCM",
+      "syllabusTemplateId": "1JAvIIuT7WFGcZGtyM3AXztVjuJ1JnlhmP1MOfBA0qHg",
+      "csdTemplateId": null,
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68"
+    },
+    "facultyDev": {
+      "name": "eCampus Faculty Development",
+      "syllabusTemplateId": null,
+      "csdTemplateId": "16tQVMZx1S2wdb9PxT9ySH-aiZP3pHuVJos-4mdCGFlI",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68"
+    },
+    "studentSuccess": {
+      "name": "eCampus Student Success Initiatives",
+      "syllabusTemplateId": null,
+      "csdTemplateId": null,
+      "igTemplateId": null
+    },
+    "entbus": {
+      "name": "ENTBUS",
+      "syllabusTemplateId": "1FxZS8pQBvBpTvF_zl7Ga7jG5NPKeDc4jCGB01-g33Yg",
+      "csdTemplateId": "18_Y0UQ1PkXUbjscKpSzdr2QmBKhWUQqqOLNKnXROspU",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68",
+      "qmrTemplateId": "16n5rOlYx4X4rqLZZLHhX9yJ9gHpOV_AdWumnQ23olfM"
     },
     "gencoun": {
       "name": "GENCOUN",
@@ -52,6 +139,116 @@
       "additionalTemplate": "1omwB7XX1iQrZm8b3ZQqv143vBVBBSx2g3HQbxpk-jxA",
       "additionalTemplateName": "Resource Document Template"
     },
+    "iep": {
+      "name": "IEP",
+      "syllabusTemplateId": "1rQFznhGupbe47zYaBOU7UATVy98OLpAFZEsSAJIxn7g",
+      "csdTemplateId": null,
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68",
+      "qmrTemplateId": "1muFLHsq2nNtKlkzzGQOzi1TzVcu22L0L"
+    },
+    "imgsci": {
+      "name": "IMGSCI",
+      "syllabusTemplateId": "1nwVlkabE1LqXXp9vHcg6_iDIm3LILfU3",
+      "csdTemplateId": "18_Y0UQ1PkXUbjscKpSzdr2QmBKhWUQqqOLNKnXROspU",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68",
+      "qmrTemplateId": "1UbtMBJeKKPyYq8mi-6fTaeJ4mC9UwEyvWNz004QpLMw"
+    },
+    "lead": {
+      "name": "LEAD",
+      "syllabusTemplateId": "1Ra4RiRB8s6B5VqM49W7gUA4HuqTCZbhwHAvWU7ZncH8",
+      "csdTemplateId": "18_Y0UQ1PkXUbjscKpSzdr2QmBKhWUQqqOLNKnXROspU",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68"
+    },
+    "nonprof": {
+      "name": "NONPROF",
+      "syllabusTemplateId": "1FxZS8pQBvBpTvF_zl7Ga7jG5NPKeDc4jCGB01-g33Yg",
+      "csdTemplateId": "18_Y0UQ1PkXUbjscKpSzdr2QmBKhWUQqqOLNKnXROspU",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68"
+    },
+    "odp": {
+      "name": "ODP",
+      "syllabusTemplateId": "1gYWqI4curZDV0BMfwDRqXok4S8S3b0_5AcJtgEnDYsM",
+      "csdTemplateId": "18_Y0UQ1PkXUbjscKpSzdr2QmBKhWUQqqOLNKnXROspU",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68",
+      "qmrTemplateId": "133_ka4oyIqkSGy9gOyVy3A4ehSyRoErDMKRdotkrxY4"
+    },
+    "opwl": {
+      "name": "OPWL",
+      "syllabusTemplateId": "1edX2QBS1oDFMAqhzVaTJZWC8y_T-Yk0S",
+      "csdTemplateId": "12-tvk2XXTHEBbMBJglTXqqG0tJW9w-wo737KRwXY1wA",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68"
+    },
+    "pace": {
+      "name": "PaCE",
+      "syllabusTemplateId": "1Mkeqv3qBdyiwv4mB2ViX4LsVPX1lAE0UzfgnpUknH9k",
+      "csdTemplateId": "18_Y0UQ1PkXUbjscKpSzdr2QmBKhWUQqqOLNKnXROspU",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68"
+    },
+    "phsm": {
+      "name": "PHSM",
+      "syllabusTemplateId": "1AM7ODwmKq1AI65sLo-pKCldHsb2alCvd5rVUDVQXAJc",
+      "csdTemplateId": "16tQVMZx1S2wdb9PxT9ySH-aiZP3pHuVJos-4mdCGFlI",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68"
+    },
+    "prc": {
+      "name": "PRC",
+      "syllabusTemplateId": "1gYWqI4curZDV0BMfwDRqXok4S8S3b0_5AcJtgEnDYsM",
+      "csdTemplateId": "12-tvk2XXTHEBbMBJglTXqqG0tJW9w-wo737KRwXY1wA",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68"
+    },
+    "projmgt": {
+      "name": "PROJMGT",
+      "syllabusTemplateId": "1VIMjBwrZp1ShaAt8Rl0w1BpHWz44GhOD80yE3m-J690",
+      "csdTemplateId": "12-tvk2XXTHEBbMBJglTXqqG0tJW9w-wo737KRwXY1wA",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68"
+    },
+    "pubadm": {
+      "name": "PUBADM",
+      "syllabusTemplateId": "1uIkB-rKVRLx40zkTB2gGicvGkV_5WTy1yPmXHRE5N5g",
+      "csdTemplateId": "18_Y0UQ1PkXUbjscKpSzdr2QmBKhWUQqqOLNKnXROspU",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68",
+      "qmrTemplateId": "133_ka4oyIqkSGy9gOyVy3A4ehSyRoErDMKRdotkrxY4"
+    },
+    "pubh": {
+      "name": "PUBH",
+      "syllabusTemplateId": "1ZEpXI_Pac4bcOTjtj3YXpHygebmEJzzmB9KHrwTtZqI",
+      "csdTemplateId": "18_Y0UQ1PkXUbjscKpSzdr2QmBKhWUQqqOLNKnXROspU",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68",
+      "qmrTemplateId": "133_ka4oyIqkSGy9gOyVy3A4ehSyRoErDMKRdotkrxY4"
+    },
+    "respcare": {
+      "name": "RESPCARE",
+      "syllabusTemplateId": "1L2pWPYXF2Ehsjeg7mMdzwz7QcKlYMHYfpsBQFi0e5ks",
+      "csdTemplateId": "18_Y0UQ1PkXUbjscKpSzdr2QmBKhWUQqqOLNKnXROspU",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68",
+      "qmrTemplateId": "133_ka4oyIqkSGy9gOyVy3A4ehSyRoErDMKRdotkrxY4"
+    },
+    "rhm": {
+      "name": "RHM",
+      "syllabusTemplateId": "1FxZS8pQBvBpTvF_zl7Ga7jG5NPKeDc4jCGB01-g33Yg",
+      "csdTemplateId": "18_Y0UQ1PkXUbjscKpSzdr2QmBKhWUQqqOLNKnXROspU",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68",
+      "qmrTemplateId": "1UCkr6mBxvWZs8ciiIN7W_K3vhxooOH8z8prnlwOKlxI"
+    },
+    "socwrk": {
+      "name": "(BSW) SOCWRK",
+      "syllabusTemplateId": "1X_DIti21h1_-ISdXcpN6ogELEOUlq2Zd4wiZJ44LQ9Q",
+      "csdTemplateId": "18_Y0UQ1PkXUbjscKpSzdr2QmBKhWUQqqOLNKnXROspU",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68"
+    },
+    "socwrk2": {
+      "name": "(MSW) SOCWRK",
+      "syllabusTemplateId": "1vDsQt5sTbRi-aGXQT48A3bRIaCdN-K0DiN9LJeNd8to",
+      "csdTemplateId": "1Oqfctc8nKQ-9C-JxFdVFxK19POzYYOV9EMl3-3uA-BQ",
+      "igTemplateId": "1084jvXn7i1i80ti08CdZl2dzVqYlA2b4hcbcsbo-pF0",
+      "qmrTemplateId": "1s90578XrziZp13WrwNRLn_xzaTrHMtB-c5wk_Qjuflw"
+    },
+    "sps": {
+      "name": "SPS",
+      "syllabusTemplateId": "1Oc7srHFJwg6dEIVX_c2iCsoqQammYPgqz9gwJFx4TZg",
+      "csdTemplateId": null,
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68"
+    },
     "stratcom": {
       "name": "STRATCOM",
       "syllabusTemplateId": "1hOWkUqtucSLK0aewGpawOuaczzA4lyd_",
@@ -60,6 +257,19 @@
       "qmrTemplateId": "1rI8S2c49LNBkJeefaqa5sYfNStxs6yHKA7t6vLUvqRE",
       "additionalTemplate": "1nX_QzcNk1xy9t4TZb9PSotzdeFlF_Yoh",
       "additionalTemplateName": "How to be Successful in This Course"
+    },
+    "ethno": {
+      "name": "UX",
+      "syllabusTemplateId": "1qpKKs4Q0l0KjPeE_4t4NT3mFSyLsPU9jXKzaDlaLZT4",
+      "csdTemplateId": "18_Y0UQ1PkXUbjscKpSzdr2QmBKhWUQqqOLNKnXROspU",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68"
+    },
+    "write": {
+      "name": "WRITE",
+      "syllabusTemplateId": "174zHzd-mvzQutpo0yGr4s4tD8-4NFCMEqX125J77_y0",
+      "csdTemplateId": "12-tvk2XXTHEBbMBJglTXqqG0tJW9w-wo737KRwXY1wA",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68",
+      "qmrTemplateId": "1r4llfy8rvRGzR9OM7ScgWsb1tVeoLgNFlKhdPtDGz1Y"
     }
   }
 }
