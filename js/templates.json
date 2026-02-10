@@ -1,0 +1,65 @@
+{
+  "globalTemplates": {
+    "blueprintStandardId": "1FONxZaZr2HEIM3sc7GNBcLtsB6U-KtCVJ5S2K3uiEtE",
+    "blueprintCyberId": "1FONxZaZr2HEIM3sc7GNBcLtsB6U-KtCVJ5S2K3uiEtE",
+    "settingsStandardId": "19KG-oXHerwL0TdKxxA6Ek9abbfRyPCZoBR_GavZSDus",
+    "settingsCyberId": "1RboXhFGh5gnCeBqRMT6Gm1CRezeR1RVEeuSF9spprLI",
+    "courseStructureWorksheetId": "1qZY4bSH2Rl-yQSPiUHTlzYn9cvZzuxbiuOgBUMbvajY"
+  },
+  "sodTemplates": {
+    "sodTemplateA": {
+      "id": "1b3aSpXBEEaZ_4ZngU6QeCBsGACYRC5qPt8XEXqO6FMs",
+      "name": "Template A: Schedule of Deliverables"
+    },
+    "sodTemplateB": {
+      "id": "1Sq1aF5R5AiYAJHZ5Y5jgHwT-Wjn0vOb2RJhX8d78aGk",
+      "name": "Template B: Agenda / Schedule of Deliverables"
+    },
+    "sodTemplateC": {
+      "id": "1U5LOw8xaB1cKjMnZ-iWCATdWnSIOW8laBATV63u7ZkU",
+      "name": "Template C: Schedule of Deliverables"
+    },
+    "sodTemplateD": {
+      "id": "1HquHUvdJMokyXErkGwy-7avHRkzFaFEg4DpXUhlqZVw",
+      "name": "Template D: Schedule of Deliverables"
+    },
+    "sodTemplateE": {
+      "id": "1jyo4w93j33DeVMuSwv2AaDUMT8q_sGkXhBeAccVGf5k",
+      "name": "Template E: Meeting Agendas, Minutes, Action Items, & Notes"
+    }
+  },
+  "programs": {
+    "facultyCourses": {
+      "name": "*Faculty Online Courses",
+      "syllabusTemplateId": "1gYWqI4curZDV0BMfwDRqXok4S8S3b0_5AcJtgEnDYsM",
+      "csdTemplateId": "12-tvk2XXTHEBbMBJglTXqqG0tJW9w-wo737KRwXY1wA",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68",
+      "qmrTemplateId": "1mzIpe5GSv7waJlN0ceQ4kVsS3i0m2lnZhqJxSuxx2YQ"
+    },
+    "acct": {
+      "name": "ACCT",
+      "syllabusTemplateId": "1gYWqI4curZDV0BMfwDRqXok4S8S3b0_5AcJtgEnDYsM",
+      "csdTemplateId": "18_Y0UQ1PkXUbjscKpSzdr2QmBKhWUQqqOLNKnXROspU",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68",
+      "qmrTemplateId": "133_ka4oyIqkSGy9gOyVy3A4ehSyRoErDMKRdotkrxY4"
+    },
+    "gencoun": {
+      "name": "GENCOUN",
+      "syllabusTemplateId": "1JKf9ieg2XRT8L8G6kivbG-9lygFQSxt6VRnLMIsis4k",
+      "csdTemplateId": "18_Y0UQ1PkXUbjscKpSzdr2QmBKhWUQqqOLNKnXROspU",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68",
+      "qmrTemplateId": "133_ka4oyIqkSGy9gOyVy3A4ehSyRoErDMKRdotkrxY4",
+      "additionalTemplate": "1omwB7XX1iQrZm8b3ZQqv143vBVBBSx2g3HQbxpk-jxA",
+      "additionalTemplateName": "Resource Document Template"
+    },
+    "stratcom": {
+      "name": "STRATCOM",
+      "syllabusTemplateId": "1hOWkUqtucSLK0aewGpawOuaczzA4lyd_",
+      "csdTemplateId": "18_Y0UQ1PkXUbjscKpSzdr2QmBKhWUQqqOLNKnXROspU",
+      "igTemplateId": "1SJ4IxyzQtbZ5PtzFvYPaYsDdmJdxwAxF_WFyXQl7R68",
+      "qmrTemplateId": "1rI8S2c49LNBkJeefaqa5sYfNStxs6yHKA7t6vLUvqRE",
+      "additionalTemplate": "1nX_QzcNk1xy9t4TZb9PSotzdeFlF_Yoh",
+      "additionalTemplateName": "How to be Successful in This Course"
+    }
+  }
+}
