@@ -13,17 +13,33 @@ const prefixInput = document.getElementById("prefix-input");
 /**
  * INITIALIZE TOOL
  */
-async function initialize() {
-    try {
-        const resp = await fetch('js/templates.json');
-        templateData = await resp.json();
-        
-        populateDropdowns();
-        setupEventListeners();
-        console.log("Ready.");
-    } catch (e) {
-        successOrErrorMessage.textContent = "Configuration Error.";
-    }
+async function initializeTool() {
+  try {
+    const response = await fetch('js/templates.json');
+    templateData = await response.json();
+    
+    populateDropdowns(templateData);
+    initUI();
+    
+    // NOTIFY READINESS
+    const statusBox = document.getElementById("success-or-error-message");
+    statusBox.style.display = "block";
+    statusBox.style.color = "#39843b"; // Boise State Green
+    statusBox.textContent = "✓ Templates Loaded. System Ready.";
+    
+    // Optional: Hide the message after 3 seconds
+    setTimeout(() => {
+      statusBox.style.display = "none";
+    }, 5000);
+
+    console.log("Health Check: JSON Data parsed and UI initialized.");
+  } catch (error) {
+    console.error("Initialization failed:", error);
+    const statusBox = document.getElementById("success-or-error-message");
+    statusBox.style.display = "block";
+    statusBox.style.color = "red";
+    statusBox.textContent = "✘ Error: Could not load templates.json";
+  }
 }
 
 function populateDropdowns() {
@@ -46,10 +62,15 @@ function populateDropdowns() {
 }
 
 function setupEventListeners() {
-    // Logic for hiding/showing fields based on projectTypeSelect (from your original code)
-    // Logic for auto-filling prefix based on programSelect (from your original code)
+    const formData = new FormData(e.target);
+    const formObject = Object.fromEntries(formData.entries());
     
-    form.addEventListener("submit", handleFormSubmit);
+    // DEBUG LOG: See exactly what is being sent to Google
+    console.log("Ready to build! Sending the following data to Google Worker:");
+    console.table(formObject); 
+    
+    // This allows you to verify that the 'program' key matches the JSON key
+    // before the Worker tries to find the IDs.
 }
 
 async function handleFormSubmit(e) {
