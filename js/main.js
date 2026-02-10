@@ -29,6 +29,98 @@ const sodTemplateSelect = document.getElementById("sod-template-select");
 const submitButton = document.querySelector("button[type=submit]");
 
 const WORKER_URL = "https://script.google.com/a/macros/boisestate.edu/s/AKfycbwr8mg5nl2eecV2Xhw4XUmnVbsYy9M1XFTkmT-7VNPuRA97iLhfLOCtx0HKNcM-J_I/exec";
+// Global variable to hold our data
+let templateData = null;
+
+/**
+ * 1. INITIALIZE: Fetch the JSON data
+ */
+async function initializeTool() {
+  try {
+    const response = await fetch('js/templates.json');
+    templateData = await response.json();
+    
+    // Populate dropdowns first
+    populateDropdowns(templateData);
+    
+    // Then set up the UI logic
+    initUI();
+    
+    console.log("System Ready.");
+  } catch (error) {
+    console.error("Initialization failed:", error);
+    document.getElementById("success-or-error-message").style.display = "";
+    document.getElementById("success-or-error-message").textContent = "Error loading configuration.";
+  }
+}
+
+/**
+ * 2. POPULATE: Fill the dropdowns based on 'active' status
+ */
+function populateDropdowns(data) {
+  const programSelect = document.getElementById("program-select");
+  const sodSelect = document.getElementById("sod-template-select");
+
+  // Populate Programs (Filtering out inactive ones)
+  for (const key in data.programs) {
+    const prog = data.programs[key];
+    if (key !== "facultyCourses" && prog.active !== false) {
+      const opt = document.createElement("option");
+      opt.value = key;
+      opt.textContent = prog.name;
+      programSelect.appendChild(opt);
+    }
+  }
+
+  // Populate SODs
+  for (const key in data.sodTemplates) {
+    const opt = document.createElement("option");
+    opt.value = key;
+    opt.textContent = data.sodTemplates[key].name;
+    sodSelect.appendChild(opt);
+  }
+}
+
+/**
+ * 3. UI LOGIC: Your original form behavior
+ */
+function initUI() {
+  const form = document.querySelector("form");
+  const projectTypeSelect = document.getElementById("type-select");
+  const redesignCheckbox = document.getElementById("redesign-checkbox");
+  // ... (All your other querySelectors from the original main.js)
+
+  // Initial State Setup
+  // (Your code to hide fields and set initial widths goes here)
+
+  // Event Listeners
+  projectTypeSelect.addEventListener("change", (e) => {
+    // Your original logic for project type change...
+  });
+
+  programSelect.addEventListener("change", (e) => {
+    const selectedKey = e.target.value;
+    const program = templateData.programs[selectedKey];
+    
+    // logic using 'program.name' instead of 'select.text'
+    if (selectedKey === "core") {
+        prefixInput.value = "CORe";
+    } else if (selectedKey === "cyber") {
+        prefixInput.value = "CPS";
+    } else {
+        prefixInput.value = program ? program.name : "";
+    }
+  });
+
+  // Form Submit Handler (The Hybrid Fetch call we discussed)
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    // (Your loading spinner and fetch to the Google Worker URL)
+  });
+}
+
+// Kick off the whole process
+window.addEventListener('load', initializeTool);
 
 async function submitToGoogle(formObject) {
   // We use a standard form post or fetch
