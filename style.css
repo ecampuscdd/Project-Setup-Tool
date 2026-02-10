@@ -1,0 +1,190 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Styles */
+
+body {
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  margin: 30px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 33rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+form {
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 23px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.course-type-field {
+  width: 100%;
+}
+
+.prefix-number-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.course-title-field {
+  width: 100%;
+}
+
+.sod-template-field {
+  width: 100%;
+}
+
+.faculty-name-field {
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+}
+
+.hint {
+  font-size: 12px;
+}
+
+select,
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 41px;
+}
+
+#type-select {
+  width: 100%;
+}
+
+#semester-year-input {
+  width: 7ch;
+}
+
+#course-title-input {
+  width: 100%;
+}
+
+#faculty-name-input {
+  width: 100%;
+}
+
+#course-length-input {
+  width: 6ch;
+}
+
+#sod-template-select {
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  accent-color: #39843b;
+  width: 20px;
+  height: 20px;
+}
+
+.submit-wrapper {
+  width: 100%;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #39843b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button[type="submit"]:hover {
+  background-color: #275d2a;
+}
+
+button[type="submit"]:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+svg {
+  margin: 0;
+  text-align: center;
+}
+
+#success-or-error-message {
+  text-align: center;
+  align-self: center;
+}
