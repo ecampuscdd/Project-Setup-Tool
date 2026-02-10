@@ -27,6 +27,24 @@ const prefixInput = document.getElementById("prefix-input");
 const courseTitleInput = document.getElementById("course-title-input");
 const sodTemplateSelect = document.getElementById("sod-template-select");
 const submitButton = document.querySelector("button[type=submit]");
+
+const WORKER_URL = "https://script.google.com/a/macros/boisestate.edu/s/AKfycbwr8mg5nl2eecV2Xhw4XUmnVbsYy9M1XFTkmT-7VNPuRA97iLhfLOCtx0HKNcM-J_I/exec";
+
+async function submitToGoogle(formObject) {
+  // We use a standard form post or fetch
+  // NOTE: Because of Google's security, we often use a "Redirect" 
+  // or a hidden iframe to handle the login pop-up if the user isn't logged in.
+  
+  const response = await fetch(WORKER_URL, {
+    method: "POST",
+    body: JSON.stringify(formObject),
+    headers: {
+      "Content-Type": "text/plain;charset=utf-8" // Helps avoid CORS pre-flight issues
+    }
+  });
+  
+  return await response.json();
+}
 const submitButtonHeight = submitButton.clientHeight;
 const submitButtonInitHTML = submitButton.innerHTML;
 
