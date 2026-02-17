@@ -2,77 +2,93 @@ const WORKER_URL = "https://script.google.com/a/macros/boisestate.edu/s/AKfycbwr
 let templateData = null;
 
 // Selectors
-const form = document.querySelector("form");
+const form = document.getElementById("setup-form");
 const projectTypeSelect = document.getElementById("type-select");
 const programSelect = document.getElementById("program-select");
 const sodTemplateSelect = document.getElementById("sod-template-select");
 const submitButton = document.querySelector("button[type=submit]");
 const successOrErrorMessage = document.getElementById("success-or-error-message");
-const prefixInput = document.getElementById("prefix-input");
 
 /**
- * INITIALIZE TOOL
+ * 1. INITIALIZE TOOL
  */
 async function initializeTool() {
   try {
+    // Fetch the JSON from GitHub
     const response = await fetch('js/templates.json');
+    if (!response.ok) throw new Error("Could not find templates.json");
+    
     templateData = await response.json();
     
+    // Fill the dropdowns
     populateDropdowns(templateData);
-    initUI();
     
-    // NOTIFY READINESS
-    const statusBox = document.getElementById("success-or-error-message");
-    statusBox.style.display = "block";
-    statusBox.style.color = "#39843b"; // Boise State Green
-    statusBox.textContent = "✓ Templates Loaded. System Ready.";
+    // Set up form behavior
+    setupEventListeners();
     
-    // Optional: Hide the message after 3 seconds
+    // Notify readiness
+    successOrErrorMessage.style.display = "block";
+    successOrErrorMessage.style.color = "#39843b"; 
+    successOrErrorMessage.textContent = "✓ Templates Loaded. System Ready.";
+    
     setTimeout(() => {
-      statusBox.style.display = "none";
+      successOrErrorMessage.style.display = "none";
     }, 5000);
 
-    console.log("Health Check: JSON Data parsed and UI initialized.");
+    console.log("Health Check: System initialized.");
   } catch (error) {
     console.error("Initialization failed:", error);
-    const statusBox = document.getElementById("success-or-error-message");
-    statusBox.style.display = "block";
-    statusBox.style.color = "red";
-    statusBox.textContent = "✘ Error: Could not load templates.json";
+    successOrErrorMessage.style.display = "block";
+    successOrErrorMessage.style.color = "red";
+    successOrErrorMessage.textContent = "✘ Error: Could not load data.";
   }
 }
 
-function populateDropdowns() {
+/**
+ * 2. POPULATE DROPDOWNS
+ */
+function populateDropdowns(data) {
     // Fill Programs
-    for (let key in templateData.programs) {
-        if (key !== "facultyCourses" && templateData.programs[key].active !== false) {
+    for (let key in data.programs) {
+        if (key !== "facultyCourses" && data.programs[key].active !== false) {
             let opt = document.createElement("option");
             opt.value = key;
-            opt.textContent = templateData.programs[key].name;
+            opt.textContent = data.programs[key].name;
             programSelect.appendChild(opt);
         }
     }
     // Fill SODs
-    for (let key in templateData.sodTemplates) {
+    for (let key in data.sodTemplates) {
         let opt = document.createElement("option");
         opt.value = key;
-        opt.textContent = templateData.sodTemplates[key].name;
+        opt.textContent = data.sodTemplates[key].name;
         sodTemplateSelect.appendChild(opt);
     }
 }
 
+/**
+ * 3. EVENT LISTENERS
+ */
 function setupEventListeners() {
-    const formData = new FormData(e.target);
-    const formObject = Object.fromEntries(formData.entries());
-    
-    // DEBUG LOG: See exactly what is being sent to Google
-    console.log("Ready to build! Sending the following data to Google Worker:");
-    console.table(formObject); 
-    
-    // This allows you to verify that the 'program' key matches the JSON key
-    // before the Worker tries to find the IDs.
+    // Handle the project type toggle logic here
+    projectTypeSelect.addEventListener("change", (e) => {
+        const programDiv = document.querySelector(".program");
+        if (e.target.value === "masterProgram") {
+            programDiv.style.display = "block";
+            programSelect.required = true;
+        } else {
+            programDiv.style.display = "none";
+            programSelect.required = false;
+        }
+    });
+
+    // Handle form submission
+    form.addEventListener("submit", handleFormSubmit);
 }
 
+/**
+ * 4. SUBMISSION
+ */
 async function handleFormSubmit(e) {
     e.preventDefault();
     setLoading(true);
@@ -81,22 +97,21 @@ async function handleFormSubmit(e) {
     const formObject = Object.fromEntries(formData.entries());
 
     try {
-        // We use fetch instead of google.script.run
         const response = await fetch(WORKER_URL, {
             method: "POST",
+            mode: "no-cors", // Crucial for Google Apps Script Web Apps
             body: JSON.stringify(formObject)
         });
-        const result = await response.json();
 
-        if (result.status === "success") {
-            successOrErrorMessage.style.color = "green";
-            successOrErrorMessage.innerHTML = `Success! <a href="${result.folderUrl}" target="_blank">Open Folder</a>`;
-        } else {
-            throw new Error(result.message);
-        }
+        // NOTE: with "no-cors", we can't read the response JSON.
+        // We'll assume success if the fetch doesn't throw an error.
+        successOrErrorMessage.style.display = "block";
+        successOrErrorMessage.style.color = "green";
+        successOrErrorMessage.textContent = "Request sent! Check your Google Drive.";
+        
     } catch (err) {
         successOrErrorMessage.style.color = "red";
-        successOrErrorMessage.textContent = err.message;
+        successOrErrorMessage.textContent = "Error: " + err.message;
     } finally {
         setLoading(false);
     }
@@ -107,4 +122,5 @@ function setLoading(isLoading) {
     submitButton.innerHTML = isLoading ? "Creating..." : "Create Project Folder";
 }
 
-window.addEventListener("load", initialize);
+// MAKE SURE THIS MATCHES YOUR FUNCTION NAME
+window.addEventListener("load", initializeTool);
